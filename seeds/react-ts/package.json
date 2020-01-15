@@ -1,0 +1,49 @@
+{
+  "name": "__data('name')",
+  "description": "webpack seed for yyl",
+  "license": "ISC",
+  "scripts": {
+    "eslint": "./src",
+    "watch": "yyl watch --proxy",
+    "all": "yyl all",
+    "commit": "yyl all --isCommit",
+    "remote": "yyl watch --proxy --remote"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ]
+  },
+  "eslintIgnore": [
+    "/dev",
+    "/output",
+    "/src/data",
+    "/src/js/lib"
+  ],
+  "dependencies": {
+    "@types/node": "^12.0.12",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "tslint-config-standard": "^9.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-node": "^10.0.0",
+    "husky": "^3.0.0",
+    "tslint": "^5.18.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

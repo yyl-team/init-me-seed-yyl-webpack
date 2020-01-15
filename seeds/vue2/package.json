@@ -1,0 +1,21 @@
+{
+  "name": "__data('name')",
+  "description": "webpack seed for yyl",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "husky": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "scripts": {
+    "watch": "yyl watch --proxy",
+    "all": "yyl all",
+    "commit": "yyl all --isCommit",
+    "remote": "yyl watch --proxy --remote"
+  }
+}
